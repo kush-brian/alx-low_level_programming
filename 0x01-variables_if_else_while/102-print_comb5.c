@@ -7,7 +7,7 @@
  *
  * Return: returns 0 if successful
  */
-			}
+
 int main(void)
 {
         int i, j;
