@@ -7,37 +7,30 @@
  *
  * Return: returns 0 if successful
  */
+			}
 int main(void)
 {
-	int w;
-	int x;
-	int y;
-	int z;
+        int i, j;
 
-	for (w = 0; w <= 9; w++)
-	{
-		for (x = 0; x <= 8; x++)
-		{
-			for (y = 0; y <= 9; y++)
-			{
-				for (z = 1; z <= 9; z++)
-				{
-					putchar('0' + w);
-					putchar('0' + x);
-					putchar(' ');
-					putchar('0' + y);
-					putchar('0' + z);
-
-					if (w < 9 || x < 8 || y < 9 || z < 9)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
+        for (i = 0; i < 100; i++)
+        {
+                for (j = 0; j < 100; j++)
+                {
+                        if (i < j)
+                        {
+                                putchar((i / 10) + 48);
+                                putchar((i % 10) + 48);
+                                putchar(' ');
+                                putchar((j / 10) + 48);
+                                putchar((j % 10) + 48);
+                                if (i != 98 || j != 99)
+                                {
+                                        putchar(',');
+                                        putchar(' ');
+                                }
 			}
-		}
-	}
-	putchar('\n');
-
-	return (0);
-}
+                }
+        }
+        putchar('\n');
+        return (0);
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
