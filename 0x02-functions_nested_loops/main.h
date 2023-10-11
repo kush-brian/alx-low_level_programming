@@ -6,9 +6,8 @@ void print_alphabet( )
 
 	while (letter <= 'z')
 	{
-		putchar(letter);
+		_putchar(letter);
 		letter++;
 	}
-	putchar('\n');
-
+	_putchar('\n');
 }
