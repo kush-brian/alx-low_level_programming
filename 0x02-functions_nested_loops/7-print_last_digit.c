@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 /**
  * print_last_digit - prints last digit of a number
  * @n: Number to find the last digit
