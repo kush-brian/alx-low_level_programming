@@ -1,13 +1,12 @@
 #include "main.h"
+
 /**
  * print_square - print a square
  * @size: the dimensions
  */
-
 void print_square(int size)
 {
 	/*int size = 5;*/
-
 	if (size <= 0)
 	{
 		_putchar('\n');
