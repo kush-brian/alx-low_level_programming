@@ -1,5 +1,9 @@
 #include "main.h"
 
+/**
+ * print_numbers - prints no
+ *
+ */
 void print_numbers(void)
 {
 	int i = '0';
