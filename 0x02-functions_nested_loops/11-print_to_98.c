@@ -11,13 +11,13 @@ void print_to_98(int n)
 
 	if (n == 98)
 	{
-		_putchar('98');
+		printf("98");
 	}
 	else if (n < 98)
 	{
 		for (i = n; i <= 98; i++)
 		{
-			print("%d", i);
+			printf("%d", i);
 			if (i < 98)
 				_putchar(',');
 		}

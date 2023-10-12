@@ -24,7 +24,7 @@ void times_table(void)
 			}
 			if (sum / 10 == 0)
 			{
-				-putchar(32);
+				_putchar(32);
 			}
 			else
 			{
