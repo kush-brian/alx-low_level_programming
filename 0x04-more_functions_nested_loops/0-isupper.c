@@ -3,6 +3,8 @@
 /**
  * _isupper - checks if a number is uppercase
  *
+ * @c: the letter under scrutiny
+ *
  * Return: returns 1 if true, 0 otherwise
  */
 
