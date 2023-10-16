@@ -4,7 +4,6 @@
  * swap_int - swaps values
  * @a: is one of the integers
  * @b: is the second integer
- * @y: is the additional
  */
 
 void swap_int(int *a, int *b)
