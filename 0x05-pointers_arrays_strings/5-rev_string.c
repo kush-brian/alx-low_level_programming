@@ -2,6 +2,7 @@
 
 /**
  * rev_string - reverse string
+ * @s: the string written in reverse
  */
 
 void rev_string(char *s)
@@ -20,6 +21,7 @@ void rev_string(char *s)
 	while (start < end)
 	{
 		char temp = s[start];
+
 		s[start] = s[end];
 		s[end] = temp;
 
