@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <ctype.h>
 /**
  * puts2 - print string
  * @str: the string to be printed
