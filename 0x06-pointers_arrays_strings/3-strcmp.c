@@ -3,7 +3,7 @@
 /**
  * _strcmp - compares two strings
  * @s1: string one
- * @s@: string two
+ * @s2: string two
  * Return: an integer less than, equal to or greater than
  */
 
@@ -15,5 +15,5 @@ int _strcmp(char *s1, char *s2)
 		s2++;
 	}
 
-	return *(unsigned char *)s1 - *(unsigned char *)s2;
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
