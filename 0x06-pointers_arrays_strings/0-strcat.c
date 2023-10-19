@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * _strcat - concanates two strings
  * @dest: the destination
@@ -9,16 +9,33 @@
 
 char *_strcat(char *dest, char *src)
 {
-        int i;
-        int j;
+	int dest_len = 0;
+	int src_len = 0;
+	int i;
 
-        for (i = 0; i <= '\0'; i++)
-        {
-                for (j = 0; j == i; j++)
-                {
-                        dest[i + j] = src[i];
-                }
-                dest[i + j] = '\0';
-        }
-	return dest;
+	/* find the length of the destination string */
+
+	while (dest[dest_len] != '\0')
+	{
+		dest_len++;
+	}
+
+	/* find the length of the source string */
+
+	while (src[src_len] != '\0')
+	{
+		src_len++;
+	}
+
+	/* copy the source string to the end of the destination string */
+	for (i = 0; i < src_len; i++)
+	{
+		dest[dest_len + i] = src[i];
+	}
+
+	/* add a null terminator*/
+
+	dest[dest_len + src_len] = '\0';
+
+	return (dest);
 }
