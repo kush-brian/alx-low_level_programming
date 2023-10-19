@@ -9,5 +9,16 @@
 
 char *_strcat(char *dest, char *src)
 {
-	printf("%s%s\n", dest, src);
+        int i;
+        int j;
+
+        for (i = 0; i <= '\0'; i++)
+        {
+                for (j = 0; j == i; j++)
+                {
+                        dest[i + j] = src[i];
+                }
+                dest[i + j] = '\0';
+        }
+	return dest;
 }
