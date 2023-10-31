@@ -19,7 +19,7 @@ int **alloc_grid(int width, int height)
 	}
 
 	/* allocate the memory for the row*/
-	array2d = (int **)malloc(sizeof(int) * height);
+	array2d = (int **)malloc(sizeof(int *) * height);
 
 	if (array2d == NULL)
 		return (NULL);
