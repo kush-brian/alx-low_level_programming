@@ -1,6 +1,11 @@
 #include <stdlib.h>
 #include "main.h"
-
+/**
+ * argstostr - concatenates all arguments
+ * @ac: the arg count
+ * @av: the arg vector
+ * Return: pointer to concatenated args
+ */
 char *argstostr(int ac, char **av)
 {
 	int i;
@@ -19,12 +24,12 @@ char *argstostr(int ac, char **av)
 		{
 			arg_length++;
 		}
-		total_len += arg_length +1;
+		total_len += arg_length + 1;
 	}
 	/* allocate the memory for the string */
 	concatenated = (char *)malloc(sizeof(char) * total_len);
-	
-	if(concatenated == NULL)
+
+	if (concatenated == NULL)
 		return (NULL);
 	/* concatenate the arguments with newline characters */
 	for (i = 0; i < ac; i++)
