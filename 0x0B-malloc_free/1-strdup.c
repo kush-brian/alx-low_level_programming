@@ -9,14 +9,32 @@ char *_strdup(char *str)
 {
 	char *s;
 	int i;
+	int length = 0;
 
-	s = (char *)malloc(sizeof(char) * 10);
-	for (i = 0; i < 10; i++)
+	if (str == NULL)
 	{
-		if (i > 10)
-		{
-			return (NULL);
-		}
+		return (NULL);
+	}
+
+	/* calculate the length of the input string */
+	while (str[length] != '\0')
+	{
+		length++;
+	}
+
+	/* allocate the memory for the new string */
+
+	s = (char *)malloc(sizeof(char) * (length + 1));
+	/* when memory allocation fails */
+
+	if (s == NULL)
+	{
+		return (NULL);
+	}
+	/* copy the original string into the new memory */
+
+	for (i = 0; i <= length; i++)
+	{
 		s[i] = str[i];
 	}
 
