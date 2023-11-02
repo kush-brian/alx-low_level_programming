@@ -12,6 +12,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, j;
 	char *memory;
+	unsigned resultlength;
+	unsigned k;
 
 	if (s1 == NULL)
 		s1 = " ";
@@ -26,21 +28,24 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		j++;
 	}
+
+	resultlength = i + (n < j ? n : j);
 	/* allocate memory */
-	memory = malloc(sizeof(char) * (i + j + 1));
+	memory = malloc(sizeof(char) * (resultlength + 1));
 	/* if memory alloc fails */
 	if (memory == NULL)
 		return (NULL);
-	/* concatenate the strings */
-	for (i = 0; s1[i] != '\0'; i++)
+	/* copy the s1 */
+	for (k = 0; k < i; k++)
 	{
-		memory[i] = s1[i];
+		memory[k] = s1[k];
 	}
-	for (j = 0; j < n && s2[j] != '\0'; j++)
+	/* concatenate the first n chars of s2*/
+	for (k = 0; k < n && k < j; k++)
 	{
-		memory[i + j] = s2[j];
+		memory[i + k] = s2[k];
 	}
-	memory[i + j] = '\0';
+	memory[resultlength] = '\0';
 
 	return (memory);
 }
