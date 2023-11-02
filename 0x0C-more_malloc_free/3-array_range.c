@@ -16,10 +16,10 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 	/* find the number of values in btwn */
-	difference = max - min;
+	difference = max - min + 1;
 
 	/* allocate memory */
-	array = malloc(sizeof(int) * (difference + 1));
+	array = malloc(sizeof(int) * (difference ));
 	/* memory fails?*/
 	if (array == NULL)
 		return (NULL);
@@ -27,7 +27,7 @@ int *array_range(int min, int max)
 	/* return the range */
 	for (i = 0; i <= max; i++)
 	{
-		array[i] = min++;
+		array[i] = min + i;
 	}
 
 	return (array);
