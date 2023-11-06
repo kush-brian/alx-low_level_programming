@@ -1,10 +1,12 @@
+#ifndef DOG_H
+#define DOG_H
 /**
  * struct dog - a dogs info
  * @name: first element
  * @age: second element
  * @owner: third element
  *
- * Description: longer one
+ * Description: Longer description
  */
 struct dog
 {
@@ -18,3 +20,5 @@ void print_dog(struct dog *d);
  * dog_t - typedef for struct dog
  */
 typedef struct dog dog_t;
+
+#endif
