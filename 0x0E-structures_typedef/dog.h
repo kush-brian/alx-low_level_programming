@@ -3,6 +3,7 @@
  * @name: first element
  * @age: second element
  * @owner: third element
+ *
  * Description: longer one
  */
 struct dog
