@@ -2,6 +2,7 @@
 /**
  * sum_listint - returns sum of all the data(n)
  * @head: pointer to head
+ * Return: the sum
  */
 int sum_listint(listint_t *head)
 {
@@ -10,7 +11,7 @@ int sum_listint(listint_t *head)
 
 	current = head;
 	sum = 0;
-	
+
 	while (current != NULL)
 	{
 		sum += current->n;
